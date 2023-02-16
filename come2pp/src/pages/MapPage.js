@@ -20,17 +20,17 @@ function MapPage() {
 
   return (
     <div class='bg-gray-400 h-screen flex justify-center '>
-      <div class="flex flex-col flex-grow h-4/5 m-auto w-1/5 max-w-xl bg-white shadow-xl rounded-lg relative ">
+      <div class="overflow-y-auto flex flex-col flex-grow md:h-4/5 m-auto md:w-1/5 h-full w-full max-w-xl bg-white shadow-xl rounded-lg relative ">
         <div class="h-14 flex w-full bg-[#C80150] text-white rounded-tl-lg rounded-tr-lg">
           <img class="h-4/5 ml-3 mr-1 mt-1 " alt="logo" src="img/logo.PNG" />
           <div class="mt-3 ml-2 text-xl ">모여라! Postech Point</div>
         </div>
         
         <div class ="text-xl ml-8 mt-6 mb-8 ">추천 POINT</div>
-
+        
         <Mapcom />
 
-        <section id="bottom-navigation" class="absolute border-slate-300 shadow-xl rounded-lg inset-x-0 bottom-0 bg-white ">
+        <section id="bottom-navigation" class="mt-5 z-50 md:absolute sticky  border-slate-300 shadow-xl rounded-lg inset-x-0 bottom-0 bg-white ">
           <div id="tabs" class="flex justify-between ">
             <div onClick={toHome} class="w-full focus:text-slate-300 hover:text-slate-300 justify-center inline-block text-center pt-2 pb-1">
               <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1">

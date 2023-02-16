@@ -7,20 +7,50 @@ function MainPage() {
     navigate('/main')
   }
   const toMap = () => {
-    navigate('/map')
+    window.location.href = '/map'
   }
   const toRank = () => {
     navigate('/rank')
   }
 
-
   return (
     <div class='bg-gray-400 h-screen flex justify-center '>
-      <div class="flex flex-col flex-grow h-4/5 m-auto w-1/5 max-w-xl bg-white shadow-xl rounded-lg relative ">
-        <div>메인페이지</div>
+      <div class="overflow-y-auto flex flex-col flex-grow md:h-4/5 m-auto md:w-1/5 h-full w-full max-w-xl bg-white shadow-xl rounded-lg relative ">
+        <div class="h-14 flex w-full bg-[#C80150] text-white rounded-tl-lg rounded-tr-lg">
+          <img class="h-4/5 ml-3 mr-1 mt-1 " alt="logo" src="img/logo.PNG" />
+          <div class="mt-3 ml-2 text-xl ">모여라! Postech Point</div>
+        </div>
+        <div class ="text-xl ml-8 mt-6 mb-2 ">사용자 프로필</div>
+        <div class="max-w-3xl w-full mx-auto z-10">
+          <div class="flex flex-col">
+            <div class="bg-white border border-white shadow-lg  rounded-3xl p-4 m-4">
+              <div class="flex-none sm:flex">
+                <div class=" relative h-32 w-32   sm:mb-0 mb-3">
+                  <img src="img/profile.PNG" alt="aji" class=" w-32 h-32 object-cover rounded-2xl"/>
+                </div>
+                <div class="flex-auto sm:ml-5 justify-evenly">
+                  <div class="flex items-center justify-between sm:mt-2 relative">
+                    <div class="flex items-center  ">
+                      <div class="flex flex-col mt-3 ml-2 ">
+                        <div class="w-full flex-none text-xl mt-3 text-gray-800 font-bold leading-none">포닉스</div>
+                        <div class="flex-auto text-gray-500 my-1">
+                          <div class="mr-3 ">학부생</div>
+                          <div>컴퓨터공학과</div>
+                        </div>
+                      </div>
+                      <div class="text-xl right-0 absolute mr-3 text-gray-800  ">10점</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class ="text-xl ml-8 mt-10 mb-8 ">추천 POINT</div>
+
         <div class='flex justify-center '>
-          <table class=" w-4/5 border ml-2 mr-2 text-sm text-left text-gray-500 dark:text-gray-400 rounded-lg ">
-				    <thead class=" bg-[#C80150] text-sm z-10 text-white bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-lg">
+          <table class=" max-w-3xl w-full mx-4 z-10 border text-sm text-left text-gray-500 dark:text-gray-400 rounded-lg ">
+				    <thead class=" bg-[#C80150] text-base z-10 text-white bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-lg">
               <tr class="bg-[#C80150] rounded-lg">
                 <th scope="col" class="px-6 py-3 ">건물명</th>
                 <th scope="col" class="px-6 py-3">포인트</th>
@@ -31,10 +61,18 @@ function MainPage() {
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">청암 학술정보관</th>
                 <td class="px-6 py-4">10점</td>
               </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">제2공학관</th>
+                <td class="px-6 py-4">5점</td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">무은재기념관</th>
+                <td class="px-6 py-4">4점</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <section id="bottom-navigation" class="absolute border-slate-300 shadow-xl rounded-lg inset-x-0 bottom-0 bg-white ">
+        <section id="bottom-navigation" class="z-10 md:absolute sticky border-slate-300 shadow-xl rounded-lg inset-x-0 bottom-0 bg-white ">
           <div id="tabs" class="flex justify-between ">
             <div onClick={toHome} class="w-full text-[#C80150] justify-center inline-block text-center pt-2 pb-1">
               <svg width="25" height="25" viewBox="0 0 42 42" class="inline-block mb-1">
